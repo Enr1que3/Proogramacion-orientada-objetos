@@ -61,8 +61,7 @@ int main()
     p1.correr();*/
 
     Persona persona = Persona(23,"Enrique", 246);
-
- 
+    
     persona.setEdad(30);
     persona.setNombre("Juan");
     persona.setTelefono(786379631);
