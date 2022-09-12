@@ -2,18 +2,71 @@
 //
 
 #include <iostream>
+using namespace std;
+
+class Persona {
+    //atributos o caracteriticas 
+    private:
+        int edad;
+        string nombre;
+        int telefono;
+        //metodos o acciones 
+        //(se declaran funciones)
+    public:
+        Persona(int, string, int);//constructor
+
+        void setEdad(int);//los setters reciben parametros
+        int getEdad();//los getters no rebicen parametros
+        void setTelefono(int);
+        int getTelefono();
+        void setNombre(string);
+        string getNombre();
+
+};
+//constructor, sirver para inicializar los atributos
+Persona::Persona(int, string,int) {
+
+}
+
+void Persona::setEdad(int edad) {
+    this->edad = edad;
+}
+
+void Persona::setTelefono(int telefono) {
+    this->telefono = telefono;
+}
+
+void Persona::setNombre(string nombre) {
+    this->nombre = nombre;
+}
+
+
+int Persona::getEdad() {
+    return edad;
+}
+
+int Persona::getTelefono() {
+    return telefono;
+}
+
+string Persona::getNombre() {
+    return nombre;
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    /*Persona p1 = Persona(20, "Enrique");
+    Persona p1(20, "Enrique");
+    p1.correr();*/
+
+    Persona persona = Persona(23,"Enrique", 246);
+
+ 
+    persona.setEdad(30);
+    persona.setNombre("Juan");
+    persona.setTelefono(786379631);
+    cout << "La edad es: " << persona.getEdad() << " con el nombre de : " << persona.getNombre() << " y su telefono es: " << persona.getTelefono() << endl;
+    return 0;
 }
 
-// Ejecutar programa: Ctrl + F5 o menú Depurar > Iniciar sin depurar
-// Depurar programa: F5 o menú Depurar > Iniciar depuración
 
-// Sugerencias para primeros pasos: 1. Use la ventana del Explorador de soluciones para agregar y administrar archivos
-//   2. Use la ventana de Team Explorer para conectar con el control de código fuente
-//   3. Use la ventana de salida para ver la salida de compilación y otros mensajes
-//   4. Use la ventana Lista de errores para ver los errores
-//   5. Vaya a Proyecto > Agregar nuevo elemento para crear nuevos archivos de código, o a Proyecto > Agregar elemento existente para agregar archivos de código existentes al proyecto
-//   6. En el futuro, para volver a abrir este proyecto, vaya a Archivo > Abrir > Proyecto y seleccione el archivo .sln
