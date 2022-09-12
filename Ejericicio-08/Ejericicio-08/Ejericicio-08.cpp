@@ -40,6 +40,7 @@ void Persona::setNombre(string nombre) {
     this->nombre = nombre;
 }
 
+//getters
 
 int Persona::getEdad() {
     return edad;
